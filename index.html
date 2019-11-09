@@ -251,9 +251,10 @@ playAudio();
 
 function changeName(){
   var myName = document.getElementById('inputName').value;
+  var urlNew = encodeURIComponent(myName);
   document.getElementById('yourName').innerText = myName;
   document.getElementById('wishLink').classList.remove("hide");
-  document.getElementById('wishLink').href = "whatsapp://send?text=*"+myName+"* sent You Happy New Year Gift Click On Blue Line https://getposted.cf/?n="+myName;
+  document.getElementById('wishLink').href = "whatsapp://send?text=```*"+myName+"*``` sent You Happy New Year Gift Click On Blue Line https://getposted.cf/?n="+urlNew;
 
 }
 
